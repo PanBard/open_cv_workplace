@@ -2,7 +2,7 @@ import os
 import pyautogui
 from time import sleep, time
 import pathlib
-from create_sample import ForVariable
+from class_only_for_variable import ForVariable
 
 parent_directory = str(pathlib.Path(__file__).parent.resolve())+"\\"
 directory = "cascade"

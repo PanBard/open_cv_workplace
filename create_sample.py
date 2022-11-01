@@ -1,18 +1,14 @@
 import pyautogui
 from time import sleep, time
 import pathlib
+from class_only_for_variable import ForVariable
 
-class ForVariable:
-    number_of_sample = 100  # bez znaczenia, ale musi byc wiekszy niz liczba zdjec
-    width = 70  # in pixels
-    height = 400  # in pixels
-
-
+forfun = ForVariable()
 
 class Sample:
 
     def run(self):
-        annotations_program_path = f"\\opencv\\build\\x64\\vc15\\bin\\opencv_createsamples.exe -info pos.txt -w {ForVariable.width} -h {ForVariable.height} -num {ForVariable.number_of_sample} -vec pos.vec"
+        annotations_program_path = f"\\opencv\\build\\x64\\vc15\\bin\\opencv_createsamples.exe -info pos.txt -w {forfun.width} -h {forfun.height} -num {forfun.number_of_sample} -vec pos.vec"
 
         pyautogui.press('win')
         sleep(0.5)
@@ -28,8 +24,8 @@ class Sample:
 
 
 
-# def main():
-#     sample = Sample()
-#     sample.run()
-#
-# main()
+def main():
+    sample = Sample()
+    sample.run()
+
+main()
