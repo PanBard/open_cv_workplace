@@ -1,0 +1,14 @@
+link 1:https://github.com/learncodebygaming/opencv_tutorials
+link 2:https://sourceforge.net/projects/opencvlibrary/files/3.4.11/
+
+Installation:
+1. install dependecies from requirements.txt
+2. download file .exe from link number 2
+3. move folder 'opencv' to current project directory
+
+How to:
+place images in folders: positive and negative (resolution: max HD)
+run 1annotations_program.py
+run 2negative_annotations.py
+run 3create_sample (specify variable how you like it)
+run 4
