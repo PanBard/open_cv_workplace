@@ -1,7 +1,18 @@
+import os
 import pyautogui
 from time import sleep, time
 import pathlib
 from create_sample import ForVariable
+
+parent_directory = str(pathlib.Path(__file__).parent.resolve())+"\\"
+directory = "cascade"
+
+# create folder: cascade
+path = os.path.join(parent_directory,directory)
+if not os.path.exists(path):
+    os.mkdir(path)
+
+
 
 sample_variable = ForVariable()
 
