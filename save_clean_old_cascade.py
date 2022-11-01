@@ -8,7 +8,6 @@ class Cleaner:
         directory = "old_cascades"
 
         parent_directory = str(pathlib.Path(__file__).parent.resolve())+"\\"
-        print(parent_directory)
 
         # create folder: old_cascades
         path = os.path.join(parent_directory,directory)
@@ -17,7 +16,7 @@ class Cleaner:
             path1 = path + "\\no.txt"
             with open(path1,'w') as file:
                 file.write("0")
-            print("First make file")
+            print("Made brand new file")
 
         path2 = path + "\\no.txt"
         with open(path2,'r+') as file:
@@ -49,4 +48,5 @@ class Cleaner:
             pyautogui.write('exit')
             pyautogui.press('enter')
             sleep(1)
+            print("3 Old cascade was successfully coped and dir is empty ")
 

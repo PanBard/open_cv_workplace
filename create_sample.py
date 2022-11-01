@@ -20,7 +20,11 @@ class Sample:
         pyautogui.write(f"cd {path}")
         pyautogui.press('enter')
         pyautogui.write(path+annotations_program_path)
-        # pyautogui.press('enter')
+        pyautogui.press('enter')
+        pyautogui.write('exit')
+        pyautogui.press('enter')
+        sleep(1)
+        print("2 New sample was created")
 
     def delete_old_sample(self):
         pyautogui.press('win')
@@ -37,9 +41,10 @@ class Sample:
         pyautogui.write('exit')
         pyautogui.press('enter')
         sleep(1)
-def main():
-    sample = Sample()
-    sample.delete_old_sample()
-    sample.run()
-
-main()
+        print("\n1 Old sample: 'pos.vec' was deleted")
+# def main():
+#     sample = Sample()
+#     sample.delete_old_sample()
+#     sample.run()
+#
+# main()
