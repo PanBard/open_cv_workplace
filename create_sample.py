@@ -22,10 +22,24 @@ class Sample:
         pyautogui.write(path+annotations_program_path)
         # pyautogui.press('enter')
 
+    def delete_old_sample(self):
+        pyautogui.press('win')
+        sleep(0.5)
+        pyautogui.write('cmd')
+        pyautogui.press('enter')
+        sleep(1)
+        path = str(pathlib.Path(__file__).parent.resolve())
+        pyautogui.write(f"cd {path}")
+        pyautogui.press('enter')
 
-
+        pyautogui.write('del pos.vec')
+        pyautogui.press('enter')
+        pyautogui.write('exit')
+        pyautogui.press('enter')
+        sleep(1)
 def main():
     sample = Sample()
+    sample.delete_old_sample()
     sample.run()
 
 main()

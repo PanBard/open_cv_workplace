@@ -3,6 +3,7 @@ import pyautogui
 from time import sleep, time
 import pathlib
 from class_only_for_variable import ForVariable
+from save_clean_old_cascade import Cleaner
 
 parent_directory = str(pathlib.Path(__file__).parent.resolve())+"\\"
 directory = "cascade"
@@ -15,6 +16,8 @@ if not os.path.exists(path):
 
 
 sample_variable = ForVariable()
+clean_it = Cleaner()
+clean_it.run()
 
 positive_sample =20 #less than number of positive sample
 negative_sample = 1000 #whatever
