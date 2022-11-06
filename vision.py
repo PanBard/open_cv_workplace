@@ -93,9 +93,10 @@ class Vision:
         for (x, y, w, h) in rectangles:
             # determine the box positions
             top_left = (x, y)
-            bottom_right = (x + w, y + h)
+            bottom_right = (x + w, y + w*6)
             # draw the box
-            cv.rectangle(haystack_img, top_left, bottom_right, line_color, lineType=line_type)
+            dar = cv.rectangle(haystack_img, top_left, bottom_right, line_color, lineType=line_type)
+            cv.putText(dar, "probowka" , (x, y - 15),cv.FONT_HERSHEY_SIMPLEX,0.9,(26,238,25,),2)
 
         return haystack_img
 
